@@ -1,0 +1,387 @@
+$primary_blue: #2a64e8;
+$primary_color: $primary_blue;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Light.ttf)
+}
+
+html {
+    overflow-x: hidden;
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        color: rgba(255, 255, 255, 0.95);
+        overflow-x: hidden;
+    }
+}
+
+header {
+    display: grid;
+    padding: 0 10px;
+    background-image: url(../images/flowers/white/52506114.jpg);
+    background-size: cover;
+    background-position: center;
+    div {
+        display: grid;
+        height: 160px;
+        color: $primary_color;
+        margin: auto;
+        text-align: center;
+        transform: scale(1.4);
+        h1 {
+            font-size: 30px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+}
+#container {
+    position: relative;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 1px $primary_color;
+    background-color: white;
+
+    ul {
+        position: absolute;
+        top: 100%; right: 0;
+        padding: 0;
+        margin: 0;
+        margin-right: 20px;
+        text-align: right;
+        height: 0;
+        width: 80px;
+        overflow: hidden;
+        li {
+            display: grid;
+            line-height: 40px;
+            transition: transform 300ms ease-in;
+            margin: 2px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.98);
+            a {
+                text-decoration: none;
+                color: $primary_color;
+                padding: 5px;
+                margin: auto;
+            }
+        }
+        
+    }
+
+    #box {
+        position: relative;
+        display: grid;
+        grid-column: 5/7;
+        border: 0;
+        margin: auto;
+        margin-right: 22px;
+        padding-bottom: 16px;
+        padding-top: 8px;
+        width: 77px;
+        div {
+            width: 35px;
+        }
+        #burger {
+            display: inline-block;
+            margin: auto;
+            margin-left: 25px;
+            transition: transform 300ms ease;
+            transform: scale(0.6);
+            div {
+                height: 2px;
+                background-color: $primary_color;
+                margin: 20% auto;
+                border-radius: 20%;
+            }
+        }
+    }
+}
+
+//styling the burger menu
+#one, #three {
+  transition: transform 800ms ease-in-out;
+  margin-left: 5px !important;
+}
+#one {
+    transform: translate(5px, 10px) rotate(45deg);
+}
+#two {
+    display: none;
+}
+#three {
+    transform: translate(-20px, 0px) rotate(-45deg);
+}
+
+#main {
+    background-image: url(../images/flowers/blue/blue_flower_2.jpg);
+    background-size: cover;
+    .sections {
+        position: relative;
+        .content {
+            // position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            // height: 71.4px;
+        }
+    }
+}
+#sidebar {
+    display: none;
+    ul {
+        li {
+            img {
+                display: none;
+                height: 100px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+    text-shadow: 0 0 1px lightgray;
+    padding: 20px;
+    margin: 0 5px;
+    box-shadow: 0 1px 0.1px white;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $primary_color;
+    text-align: center;
+}
+h2 {
+    color: #3b7cd0db;
+    font-size: 22px;
+}
+
+#main {
+    #about {
+        .content {
+            padding-top: 5px;
+            h1 {
+                margin-top: 0;
+            }
+            #intro {
+                padding: 4%;
+            }
+        }
+        #project-wrapper {
+            display: flex;
+            flex-direction: column;
+            a {
+                margin: 10px auto;
+                div {
+                    height: 250px;
+                    width: 300px;
+                    background-size: cover;
+                    transition: all 1s ease-out;
+                    opacity: 0.3;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                #out {
+                    background-image: url(../images/projects/outdoor.png);
+                }
+                #code {
+                    background-image: url(../images/projects/code.png);
+                }
+                #blog {
+                    background-image: url(../images/projects/blog.png);
+                }
+            }
+        }
+    }
+    #endevours {
+        .content {
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                li {
+                    display: grid;
+                    padding: 10px;
+                    color: $primary_color;
+                    h1 {
+                        margin: 0;
+                    }
+                    span {
+                        padding: 10px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    padding: 20px;
+}
+.box {
+    display: grid;
+    grid-gap: 5px;
+    margin-left: 20px;
+    span {
+        font-size: 20px;
+        margin-left: -20px;
+        padding: 5px 10px;
+        padding-left: 0;
+        border-radius: 2px;
+        * {
+            background-color: #004887c1;
+            color: white;
+            padding: 5px;
+        }
+    }
+}
+
+footer {
+    border-top: 1px #004787 solid;
+    color: #004787;
+    padding: 10px;
+    font-size: 14px;
+    background-color: white;
+}
+
+#backToTop {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    bottom: -20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/Up-Chevron-Circle-512.png);
+    background-size: contain;
+    opacity: 0.3;
+}
+
+@media (min-width: 600px) {
+    #main {
+        #about {
+            #project-wrapper {
+                flex-direction: row;
+            }
+        }
+        .sections {
+            position: relative;
+            background-image: url(../images/flowers/blue/blue_flower_2.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            .content {
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                .grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+                h1 {
+                    margin-top: 5px;
+                }
+            }
+        }
+        #endevours {
+            .content {
+                ul {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+    #sidebar {
+        display: grid;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 4;
+        height: 30px;
+        ul {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline;
+                background-color: $primary_color;
+                padding: 12px 25px;
+                border-radius: 2px 2px 0 0;
+                transition: all 800ms ease-out;
+                cursor: pointer;
+                margin: auto 0;
+            }
+            .active {
+                background-color: white;
+                color: $primary_color;
+                box-shadow: 0 2px 2px $primary_color;
+            }
+        }
+    }
+    #main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 400%;
+        .sections {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    .grid {
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    #container {
+        display: grid;
+        grid-template-columns: 200px auto;
+    }
+    #sidebar {
+        display: grid;
+        position: relative;
+        height: 100%;
+        background-color: $primary_color;
+        ul {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            li {
+                display: grid;
+                background-color: $primary_color;
+                padding: 12px 25px;
+                border-radius: 0;
+                img {
+                    display: block;
+                }
+            }
+            .active {
+                background-color: white;
+                color: $primary_color;
+                box-shadow: 0 2px 2px $primary_color;
+            }
+        }
+    }
+    #main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 400%;
+        .sections {
+            width: 100%;
+        }
+    }
+}
