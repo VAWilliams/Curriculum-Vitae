@@ -11,13 +11,13 @@ html {
 
 header {
   display: grid;
+  position: relative;
   padding: 0 10px;
   background-image: url(../images/flowers/white/52506114.jpg);
   background-size: cover;
   background-position: center; }
   header div {
     display: grid;
-    height: 160px;
     color: #2a64e8;
     margin: auto;
     text-align: center;
@@ -25,7 +25,25 @@ header {
     header div h1 {
       font-size: 30px;
       background-color: transparent;
-      box-shadow: none; }
+      box-shadow: none;
+      padding: 0; }
+    header div p {
+      margin: 10px 0; }
+  header .down {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    background-image: url(../images/Up-Chevron-Circle-512.png);
+    background-size: contain;
+    opacity: 0.3;
+    transform: rotate(180deg);
+    transition: all 700ms ease-in-out; }
+    header .down:hover {
+      opacity: 0.5;
+      transform: rotate(180deg) translateY(-10px); }
 
 #container {
   position: relative; }
@@ -81,7 +99,6 @@ nav {
       transform: scale(0.6); }
       nav #box #burger div {
         height: 2px;
-        background-color: #2a64e8;
         margin: 20% auto;
         border-radius: 20%; }
 
@@ -138,42 +155,57 @@ h2 {
   #main #about .content h1 {
     margin-top: 0; }
   #main #about .content #intro {
+    display: grid;
     padding: 4%; }
-#main #about #project-wrapper {
+    #main #about .content #intro .image {
+      margin: auto;
+      width: 200px;
+      height: 200px;
+      background-image: url(../images/flowers/white/52506114.jpg);
+      background-size: cover;
+      border-radius: 50%; }
+    #main #about .content #intro hr {
+      border: none;
+      height: 2px;
+      background-color: white; }
+    #main #about .content #intro p {
+      padding: 20px;
+      padding-top: 40px; }
+#main #endevours .content #project-wrapper {
   display: flex;
-  flex-direction: column; }
-  #main #about #project-wrapper a {
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-top: 20px;
+  padding: 10px; }
+  #main #endevours .content #project-wrapper a {
+    text-decoration: none;
     margin: 10px auto; }
-    #main #about #project-wrapper a div {
+    #main #endevours .content #project-wrapper a div {
       height: 250px;
       width: 300px;
       background-size: cover;
-      transition: all 1s ease-out;
-      opacity: 0.3; }
-      #main #about #project-wrapper a div:hover {
-        opacity: 1; }
-    #main #about #project-wrapper a #out {
+      transition: all 1s ease-out; }
+    #main #endevours .content #project-wrapper a #out {
       background-image: url(../images/projects/outdoor.png); }
-    #main #about #project-wrapper a #code {
+    #main #endevours .content #project-wrapper a #code {
       background-image: url(../images/projects/code.png); }
-    #main #about #project-wrapper a #blog {
+    #main #endevours .content #project-wrapper a #blog {
       background-image: url(../images/projects/blog.png); }
-#main #endevours .content ul {
-  display: grid;
-  grid-template-columns: 1fr; }
-  #main #endevours .content ul li {
-    display: grid;
-    padding: 10px;
-    color: #2a64e8; }
-    #main #endevours .content ul li h1 {
-      margin: 0; }
-    #main #endevours .content ul li span {
-      padding: 10px;
-      color: white; }
+
+#eduInfo {
+  padding: 20px 40px; }
 
 .grid {
   display: grid;
   padding: 20px; }
+
+#workGrid {
+  padding-top: 50px; }
+
+.more_info {
+  padding: 20px; }
+  .more_info h2 {
+    padding: 30px; }
 
 .box {
   display: grid;
@@ -211,9 +243,28 @@ footer {
   background-size: contain;
   opacity: 0.3; }
 
+#footer {
+  display: grid;
+  padding: 0;
+  border-bottom: 3px white solid; }
+  #footer h2 {
+    margin: 0;
+    padding: 0 40px;
+    padding-top: 20px; }
+  #footer div {
+    width: 200px;
+    display: grid;
+    padding: 20px 50px; }
+    #footer div * {
+      margin: 0;
+      padding: 10px; }
+  #footer section {
+    background-color: #2a64e8;
+    color: white;
+    padding: 10px;
+    text-align: right; }
+
 @media (min-width: 600px) {
-  #main #about #project-wrapper {
-    flex-direction: row; }
   #main .sections {
     position: relative;
     background-image: url(../images/flowers/blue/blue_flower_2.jpg);
@@ -229,8 +280,8 @@ footer {
         grid-template-columns: 1fr 1fr; }
       #main .sections .content h1 {
         margin-top: 5px; }
-  #main #endevours .content ul {
-    grid-template-columns: 1fr 1fr; }
+  #main #endevours .content #project-wrapper {
+    flex-direction: row; }
 
   #sidebar {
     display: grid;

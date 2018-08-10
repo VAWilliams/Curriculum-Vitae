@@ -18,13 +18,13 @@ html {
 
 header {
     display: grid;
+    position: relative;
     padding: 0 10px;
     background-image: url(../images/flowers/white/52506114.jpg);
     background-size: cover;
     background-position: center;
     div {
         display: grid;
-        height: 160px;
         color: $primary_color;
         margin: auto;
         text-align: center;
@@ -33,6 +33,25 @@ header {
             font-size: 30px;
             background-color: transparent;
             box-shadow: none;
+            padding: 0;
+        }
+        p {
+            margin: 10px 0;
+        }
+    }
+    .down {
+        position: absolute;
+        bottom: -10px; left: 0; right: 0;
+        height: 70px;
+        width: 70px;
+        background-image: url(../images/Up-Chevron-Circle-512.png);
+        background-size: contain;
+        opacity: 0.3;
+        transform: rotate(180deg);
+        transition: all 700ms ease-in-out;
+        &:hover {
+            opacity: 0.5;
+            transform: rotate(180deg) translateY(-10px);
         }
     }
 }
@@ -97,7 +116,7 @@ nav {
             transform: scale(0.6);
             div {
                 height: 2px;
-                background-color: $primary_color;
+                // background-color: $primary_color;
                 margin: 20% auto;
                 border-radius: 20%;
             }
@@ -171,51 +190,69 @@ h2 {
                 margin-top: 0;
             }
             #intro {
+                display: grid;
                 padding: 4%;
-            }
-        }
-        #project-wrapper {
-            display: flex;
-            flex-direction: column;
-            a {
-                margin: 10px auto;
-                div {
-                    height: 250px;
-                    width: 300px;
+                .image {
+                    margin: auto;
+                    width: 200px;
+                    height: 200px;
+                    background-image: url(../images/flowers/white/52506114.jpg);
                     background-size: cover;
-                    transition: all 1s ease-out;
-                    opacity: 0.3;
-                    &:hover {
-                        opacity: 1;
-                    }
+                    border-radius: 50%;
                 }
-                #out {
-                    background-image: url(../images/projects/outdoor.png);
+                hr {
+                    border: none;
+                    height: 2px;
+                    background-color: white;
                 }
-                #code {
-                    background-image: url(../images/projects/code.png);
-                }
-                #blog {
-                    background-image: url(../images/projects/blog.png);
+                p {
+                    padding: 20px;
+                    padding-top: 40px;
                 }
             }
         }
     }
     #endevours {
         .content {
-            ul {
-                display: grid;
-                grid-template-columns: 1fr;
-                li {
-                    display: grid;
-                    padding: 10px;
-                    color: $primary_color;
-                    h1 {
-                        margin: 0;
+            // ul {
+            //     display: grid;
+            //     grid-template-columns: 1fr;
+            //     li {
+            //         display: grid;
+            //         padding: 10px;
+            //         color: $primary_color;
+            //         h1 {
+            //             margin: 0;
+            //         }
+            //         span {
+            //             padding: 10px;
+            //             color: white;
+            //         }
+            //     }
+            // }
+            #project-wrapper {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.95);
+                margin-top: 20px;
+                padding: 10px;
+                a {
+                    text-decoration: none;
+                    margin: 10px auto;
+                    div {
+                        height: 250px;
+                        width: 300px;
+                        background-size: cover;
+                        transition: all 1s ease-out;
                     }
-                    span {
-                        padding: 10px;
-                        color: white;
+                    #out {
+                        background-image: url(../images/projects/outdoor.png);
+                    }
+                    #code {
+                        background-image: url(../images/projects/code.png);
+                    }
+                    #blog {
+                        background-image: url(../images/projects/blog.png);
                     }
                 }
             }
@@ -223,10 +260,24 @@ h2 {
     }
 }
 
+#eduInfo {
+    padding: 20px 40px;
+}
+
 .grid {
     display: grid;
     padding: 20px;
 }
+#workGrid {
+    padding-top: 50px;
+}
+.more_info {
+    padding: 20px;
+    h2 {
+        padding: 30px;
+    }
+}
+
 .box {
     display: grid;
     grid-gap: 5px;
@@ -267,14 +318,36 @@ footer {
     background-size: contain;
     opacity: 0.3;
 }
+#footer {
+    display: grid;
+    padding: 0;
+    border-bottom: 3px white solid;
+    h2 {
+        margin: 0;
+        padding: 0 40px;
+        padding-top: 20px;
+    }
+    div {
+        width: 200px;
+        display: grid;
+        padding: 20px 50px;
+        * {
+            margin: 0;
+            padding: 10px;
+        }
+
+    }
+    section {
+        background-color: $primary_color;
+        color: white;
+        padding: 10px;
+        text-align: right;
+
+    }
+}
 
 @media (min-width: 600px) {
     #main {
-        #about {
-            #project-wrapper {
-                flex-direction: row;
-            }
-        }
         .sections {
             position: relative;
             background-image: url(../images/flowers/blue/blue_flower_2.jpg);
@@ -293,8 +366,11 @@ footer {
         }
         #endevours {
             .content {
-                ul {
-                    grid-template-columns: 1fr 1fr;
+                // ul {
+                //     grid-template-columns: 1fr 1fr;
+                // }
+                #project-wrapper {
+                    flex-direction: row;
                 }
             }
         }

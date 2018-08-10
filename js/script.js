@@ -7,6 +7,7 @@ $(document).ready(() => {
     let content_items = document.getElementsByClassName('content');
     // creating an array to store heights
     let content_heights = [];
+    let footer_height = $('#footer').height();
     
     content_heights = [];
     for (let i = 0; i < 4; i++) {
@@ -50,26 +51,26 @@ $(document).ready(() => {
     })
 
     // navigation bar
-    let burger = document.getElementById("burger");
-    burger.name = "closed";
+    // let burger = document.getElementById("burger");
+    // burger.name = "closed";
 
-    $("#burger").click(() => {
-        if (burger.name == "closed") {
+    // $("#burger").click(() => {
+    //     if (burger.name == "closed") {
 
-            $("#uList").animate({height:"250px"}, 900)
-            $('#one').css('transform', 'translate(5px, 10px) rotate(-45deg)')
-            $('#three').css('transform', 'translate(-20px, 0px) rotate(45deg)')
+    //         $("#uList").animate({height:"250px"}, 900)
+    //         $('#one').css('transform', 'translate(5px, 10px) rotate(-45deg)')
+    //         $('#three').css('transform', 'translate(-20px, 0px) rotate(45deg)')
             
-            burger.name = "open";
+    //         burger.name = "open";
 
-        } else {
+    //     } else {
 
-            $("#uList").animate({height:"0"}, 900)
-            $('#one').css('transform', 'translate(5px, 10px) rotate(45deg)')
-            $('#three').css('transform', 'translate(-20px, 0px) rotate(-45deg)')
-            burger.name = "closed";
-        }
-    });
+    //         $("#uList").animate({height:"0"}, 900)
+    //         $('#one').css('transform', 'translate(5px, 10px) rotate(45deg)')
+    //         $('#three').css('transform', 'translate(-20px, 0px) rotate(-45deg)')
+    //         burger.name = "closed";
+    //     }
+    // });
 
 
 
@@ -110,15 +111,28 @@ $(document).ready(() => {
         $('html, body').animate({scrollTop:0}, 800);
     })
 
+    align = $(document).height() - $('#footer').height();
 
     // action for slide content
     for (let i = 0; i < 4; i++) {
         $('#link' + i).on('click', function () {
             $(this).siblings().removeClass('active');
             $(this).addClass('active');
-            $('html, body').animate({scrollTop: $(document).height()}, 800);
+            window.scrollTo({
+                top: $('#nav').offset().top,
+                behavior: 'smooth'
+
+            });
             $('#main').animate({marginLeft: (i*-100) + '%'}, 500);
         })
     }
+
+    $('.down').click(() => {
+        window.scrollTo({
+            top: $('#nav').offset().top,
+            behavior: 'smooth'
+
+        });
+    })
 
 })

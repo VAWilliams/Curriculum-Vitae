@@ -15,6 +15,8 @@
         <div>
             <h1>Curriculum Vitae</h1> <p>of</p> <span>Vicario Williams</span>
         </div>
+        <div class="down">
+        </div>
     </header>
     <nav id="nav">
         <div id="box">
@@ -35,7 +37,7 @@
                 <li id="link0" class="active"> <img src="images/user.png" alt=""> About</li>
                 <li id="link1"> <img src="images/reading.png" alt=""> Academics</li>
                 <li id="link2"> <img src="images/database.png" alt=""> Work</li>
-                <li id="link3"> <img src="images/paper-plane.png" alt=""> Endevours</li>
+                <li id="link3"> <img src="images/paper-plane.png" alt=""> Portfolio</li>
             </ul>
         </aside>
 
@@ -45,19 +47,17 @@
                 <div class="content" name="closed">
                         <h1>About Me</h1>
                         <div id="intro">
+                            <div class="image">
+
+                            </div>
                             <p>
                                 Gradual dreamer. Aspiring for programming omnipotency and driven by social empathy. <br>
-                                Have the belief that we are at the pinacle of technongical development and that the minds of this generation are armed with tools to make an innovative future unravel.
+                                Have the belief that we are at the pinnacle of technological development and that the minds of this generation are armed with tools to make an innovative future unravel.
                             </p>
                         </div>
                         <hr>
-                        <h2 style="text-align: center;">Projects</h2>
-                        <div id="project-wrapper">
-                            <a href="https://vawilliams.github.io/outdoor_adventures/indexHome.html"><div class="project" id="out">
-                            </div></a>
-                            <a href="https://vawilliams.github.io/Code4CT/"><div class="project" id="code"></div></a>
-                            <a href="https://vawilliams-blog-v2.glitch.me/"><div class="project" id="blog"></div></a>
-                        </div>
+                        <h2 style="text-align: center;">At your Service.</h2>
+                        
                 </div>
             </section>
     
@@ -81,13 +81,16 @@
                                     <h2>Tertiary Education</h2>
             
                                     <div class="box">
-                                        <span>Institution:</span>	CodeSpace
-                                        <span>Course:</span>	Front End Web development
+                                        <span>Institution:</span>	Salesians Life Choices Academy: 2018
+                                        <span>Course:</span>	Fullstack Web Development (6 months full-time)
                                         <span>Subjects:</span>	Programming, Professional Development, Design Thinking
-                                        <span>Programming Languages:</span>	HTML and Bootsrap Framework, CSS(SASS and SCSS), Javascript(Node.js, Express.js, Mongoose, JQuery, React.js), Mongodb, MySQL
+                                        <span>Programming Languages:</span>	HTML and Bootstrap Framework, CSS(SASS and SCSS), Javascript(Node.js, Express.js, Mongoose, JQuery, React.js), Mongodb, MySQL
                                     </div>
                                 </div>
                         </div>
+                        <p id="eduInfo">
+                            The Life Choices Academy is a full-time program which empowers youth from the Cape Flats with life, practical and professional development skills. We did intensive study of the following web development languages: HTML, CSS, SASS, jQuery, JavaScript, Node and MongoDB. As part of our professional development, we had the opportunity to use online resources such as MOOCs, were taught Design Thinking and made use of resources for personal reflection, such as DISC profiles and SMART goal setting. Taking part in this program has made me aware of my weaknesses and helped me dramatically improve my ability to use my weaknesses in my stead whilst gradually turning them into strengths.
+                        </p>
                 </div>
             </section>
     
@@ -95,7 +98,7 @@
             <section class="sections" id="work">
                 <div class="content" name="closed">
                         <h1>Work</h1>
-                        <div class="grid">
+                        <div class="grid" id="workGrid">
                             <div class="box">
                                     <span>Name of Company:</span>	Devon Industrial Ventilation
                                     <span>Position:</span>	Contracted General
@@ -111,21 +114,36 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="more_info">
+                            <h2>What I learnt</h2>
+                            <ul>
+                                <li>
+                                    Team work is essential to practice in a professional environment, and I found that understanding the strengths and weaknesses of each member made carrying out tasks extemely efficient as opposed to working individually.
+                                </li>
+                                <li>
+                                    To communicate means to express what your point is so that the listener clearly understands to the point where they can validly convey your point back.
+                                </li>
+                                <li>
+                                    One has to pay attention to detail, especially in roles where Troubleshooting is an necessity.
+                                </li>
+                            </ul>
+                        </div>
+
                 </div>
             </section>
     
     
             <section class="sections" id="endevours">
                 <div class="content" name="closed">
-                    <h1>Endevours</h1>
-                    <ul>
+                    <h1>Portfolio</h1>
+                    <!-- <ul>
                         <li>
                             <h3>IT</h3> <span>Technical knowhow pertaining to PC hardware is essential for a programmer. Troubleshooting capacity will never go to waste.</span>
                         </li>
-                        <!-- <li>
+                        <li>
                             Programming <span>
                                 </span>
-                        </li> -->
+                        </li>
                         <li>
                             <h3>Drawing</h3> <span>When it comes to UI and UX, a developers mind should always have a creative. <br>
                                 The ability to generate new ideas and concepts is almost a rarity, so thinking outside of the box bares fruition.</span>
@@ -139,7 +157,13 @@
                         <li>
                             <h3>Japanese</h3> <span>Statistics have proven that the study of extra-native languages creates new neural pathways and allows for new concepts and techniques to be integrated.</span>
                         </li>
-                    </ul>
+                    </ul> -->
+                    <div id="project-wrapper">
+                        <a href="https://vawilliams.github.io/outdoor_adventures/indexHome.html"> <h1>Outdoor Adventures</h1> <div class="project" id="out">
+                        </div></a>
+                        <a href="https://vawilliams.github.io/Code4CT/"> <h1>Code4CT</h1> <div class="project" id="code"></div></a>
+                        <a href="https://vawilliams-blog-v2.glitch.me/"> <h1>Blog</h1> <div class="project" id="blog"></div></a>
+                    </div>
                 </div>
             </section>
 
@@ -149,6 +173,15 @@
     </section>
 
     <div id="backToTop"></div>
+
+    <footer id="footer">
+        <div>
+                <h2>Contact</h2>
+            <p>vicantgus@gmail.com</p>
+            <p>+27 67 055 6933</p>
+        </div>
+        <section>2018 | Vicario Antonio Williams</section>
+    </footer>
 
     <script src="js/script.js"></script>
     
