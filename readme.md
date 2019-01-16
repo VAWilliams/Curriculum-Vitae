@@ -52,9 +52,3 @@ public class Person
   }
 }
 ```
-
----
-title: About Front Matter
-example:
-  language: yaml
----
