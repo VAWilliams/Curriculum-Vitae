@@ -1,5 +1,5 @@
 [whiteFlower]: images/flowers/white/52506114.jpg
-[blueFlower]: images/flowers/blue/
+[blueFlower]: images/flowers/blue/blue-flowers-available-in-december-14-free-wallpaper.jpg
 
 # Welcome
 The following key value pairs show some details about me:
