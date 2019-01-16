@@ -1,4 +1,5 @@
 [whiteFlower]: images/flowers/white/52506114.jpg
+[blueFlower]: images/flowers/blue/
 
 # Welcome
 The following key value pairs show some details about me:
@@ -26,7 +27,10 @@ $('card').html(
 );
 ```
 
-![alt flower][whiteFlower]
+|      Discription       |            Image           |
+|------------------------|----------------------------|
+| This is a white flower | ![alt flower][whiteFlower] |
+| This is a blue flower  | ![alt flower][blueFlower]  |
 
 #### And this code
 ```c#
