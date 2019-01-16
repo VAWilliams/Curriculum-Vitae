@@ -27,10 +27,10 @@ $('card').html(
 );
 ```
 
-|      Discription       |            Image           |
-|------------------------|----------------------------|
-| This is a white flower | ![alt flower][whiteFlower] |
-| This is a blue flower  | ![alt flower][blueFlower]  |
+|        Discription         |            Image           |
+|----------------------------|----------------------------|
+| This is a **white flower** | ![alt flower][whiteFlower] |
+| This is a **blue flower**  | ![alt flower][blueFlower]  |
 
 #### And this code
 ```c#
