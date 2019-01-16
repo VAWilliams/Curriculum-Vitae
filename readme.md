@@ -8,6 +8,7 @@ The following key value pairs show some details about me:
 |:--------:|:--------:|
 | Name:    | Vicario  |
 | Surname: | Williams |
+| Species: | Human    |
 
 #### This code has me excited for some Reason
 ```javascript
