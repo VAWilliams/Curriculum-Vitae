@@ -1,3 +1,5 @@
+[whiteFlower]: images/flowers/52506114.jpg
+
 # Welcome
 The following key value pairs show some details about me:
 
@@ -23,6 +25,9 @@ $('card').html(
    </p>`
 );
 ```
+
+![alt white-flower][whiteFlower]
+
 #### And this code
 ```c#
 public class Person
