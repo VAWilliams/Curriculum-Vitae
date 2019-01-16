@@ -52,3 +52,14 @@ public class Person
   }
 }
 ```
+
+<details>
+<summary>Details</summary>
+
+These details remain **hidden** until expanded.
+
+    PASTE LOGS HERE
+    LOGS HERE PASTE
+    HERE PASTE LOGS
+
+</details>
