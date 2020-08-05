@@ -161,7 +161,7 @@ h2 {
       margin: auto;
       width: 200px;
       height: 200px;
-      background-image: url(../images/flowers/white/52506114.jpg);
+      background-image: url(https://media-exp1.licdn.com/dms/image/C5603AQG7lF0X8YZvQA/profile-displayphoto-shrink_200_200/0?e=1602115200&v=beta&t=b47-nfcMykywuPvV2FGb59O9d8TP0OrTkmM4sKmg2sk);
       background-size: cover;
       border-radius: 50%; }
     #main #about .content #intro hr {
@@ -170,7 +170,9 @@ h2 {
       background-color: white; }
     #main #about .content #intro p {
       padding: 20px;
-      padding-top: 40px; }
+      padding-top: 40px;
+      text-align: center;
+    }
 #main #endevours .content #project-wrapper {
   display: flex;
   flex-direction: column;
@@ -189,12 +191,18 @@ h2 {
       background-image: url(../images/projects/outdoor.png); }
     #main #endevours .content #project-wrapper a #code {
       background-image: url(../images/projects/code.png); }
-    #main #endevours .content #project-wrapper a #blog {
-      background-image: url(../images/projects/blog.png); }
+    #main #endevours .content #project-wrapper a #product-landing-page {
+      background-image: url(../images/projects/product-landing.png); }
 
+    .project {
+      margin: auto 5px;
+    }
 #eduInfo {
   padding: 20px 40px; }
 
+  .eduWrap {
+    padding: 0 5%;
+  }
 .grid {
   display: grid;
   padding: 20px; }
@@ -202,6 +210,9 @@ h2 {
 #workGrid {
   padding-top: 50px; }
 
+  #workGrid div {
+    padding: 0 5%;
+  }
 .more_info {
   padding: 20px; }
   .more_info h2 {
